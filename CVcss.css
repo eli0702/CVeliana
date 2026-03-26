@@ -6,6 +6,16 @@ body {
     color: #e2e8f0;
 }
 
+/* LINKS */
+a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 /* CONTENEDOR */
 .container {
     max-width: 900px;
@@ -37,6 +47,22 @@ h2 {
     margin-top: 30px;
 }
 
+/* BOTÓN CV */
+.btn-cv {
+    display: inline-block;
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-cv:hover {
+    background-color: #0ea5e9;
+}
+
 /* TARJETAS */
 .card {
     background-color: #1e293b;
@@ -44,6 +70,18 @@ h2 {
     border-radius: 10px;
     margin-bottom: 15px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aparecer 0.8s forwards;
+}
+
+/* ANIMACIÓN */
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* DETAILS */
@@ -80,4 +118,23 @@ summary {
 /* TEXTO */
 p {
     line-height: 1.5;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.whatsapp img {
+    width: 60px;
+    animation: latido 1.5s infinite;
+}
+
+/* LATIDO */
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+    100% { transform: scale(1); }
 }
