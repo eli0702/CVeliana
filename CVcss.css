@@ -129,6 +129,8 @@ p {
 
 .whatsapp img {
     width: 60px;
+    max-width: 12vw;
+    height: auto;
     animation: latido 1.5s infinite;
 }
 
